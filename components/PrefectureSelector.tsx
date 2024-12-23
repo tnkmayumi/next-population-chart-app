@@ -26,6 +26,7 @@ const PrefectureSelector: React.FC<PrefectureSelectorProps> = ({
 }) => {
   return (
     <select onChange={(e) => onSelect(Number(e.target.value))}>
+      <option value="">都道府県を選択してください</option>
       {prefectures.map((prefecture) => (
         <option key={prefecture.code} value={prefecture.code}>
           {prefecture.name}
